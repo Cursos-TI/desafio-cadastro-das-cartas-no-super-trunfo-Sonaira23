@@ -62,9 +62,7 @@ int main() {
 
     printf("PIB: %.2f  bilhões de reais \n", PIB2);
 
-    printf("Números de pontos turísticos: %d \n", numero_de_pontos_turisticos2);
-
-  
+    printf("Números de pontos turísticos: %d \n \n", numero_de_pontos_turisticos2);
 
     
     // Exibição dos Dados das Cartas:
