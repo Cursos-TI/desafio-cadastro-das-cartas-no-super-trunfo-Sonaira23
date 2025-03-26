@@ -18,6 +18,8 @@ int main() {
     int numero_de_pontos_turisticos = 50;
     float densidade_populacional = (float) (populacao / area);
     float PIB_per_capta = (float) (PIB / populacao)* (1000000000);
+    float superPoder = (float) (populacao + area + PIB + PIB_per_capta + (1 / densidade_populacional) + numero_de_pontos_turisticos);
+
     
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -42,6 +44,8 @@ int main() {
 
     printf("PIB per capta: %.2f reais \n", PIB_per_capta);
 
+    printf("Super Poder: %.2f \n \n", superPoder);
+
     char inicial2 = 'B';
     char codigo2[] = "B02";
     char nome_da_cidade2[20]= "Rio de Janeiro";
@@ -51,6 +55,9 @@ int main() {
     int numero_de_pontos_turisticos2 = 30;
     float densidade_populacional2 = (float) (populacao2 / area2);
     float PIB_per_capta2 = (float) (PIB2 / populacao2)* (1000000000);
+    float superPoder2 = (float) (populacao2 + area2 + PIB2 + PIB_per_capta2 + (1 / densidade_populacional2) + numero_de_pontos_turisticos2);
+
+    int resultado;
 
     printf("Carta 02 \n");
 
@@ -72,7 +79,13 @@ int main() {
 
     printf("PIB per capta: %.2f reais \n", PIB_per_capta2);
 
-    
+    printf("Super Poder: %.2f \n \n", superPoder2);
+
+    resultado = superPoder > superPoder2;
+    printf("O resultado total da Carta 01 (%.2f) é maior do que o valor total da Carta 02 (%.2f): %d \n", 
+                                superPoder,
+                                superPoder2,
+                                superPoder > superPoder2);
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
